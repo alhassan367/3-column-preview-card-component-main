@@ -1,0 +1,98 @@
+:root{
+    --BrightOrange: hsl(31, 77%, 52%);
+    --DarkCyan: hsl(184, 100%, 22%);
+    --VeryDarkCyan: hsl(179, 100%, 13%);
+    --TransparentWhite: hsla(0, 0%, 100%, 0.75); /*paragraphs*/
+    --VeryLightGray : hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+    --FontSize: 15px
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--VeryLightGray);
+    color: var(--TransparentWhite);
+    padding: 2rem 1rem;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    /* gap: 2rem; */
+    max-width: 400px;
+    margin: 0 auto;
+}
+.suv-card {
+    background-color: var(--BrightOrange);
+}
+.suv-card button {
+    color: var(--BrightOrange);
+}
+
+.sedan-card {
+    background-color: var(--DarkCyan);
+    border-top-left-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+}
+.suv-card button{
+    color: var(--DarkCyan);
+}
+
+.luxury-card {
+    background-color: var(--VeryDarkCyan);
+    border-top-right-radius: 0.8rem;
+    border-bottom-left-radius: 0rem;
+    border-top-right-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+}
+.luxury-card button{
+    color: var(--VeryDarkCyan);
+}
+.card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.9rem;
+}
+.card h2 {
+    font-size: 1.9rem;
+    font-size: var(--FontSize);
+    font-family: 'Lexend Deca';
+    font-weight: 700;
+}
+.card p{
+    line-height: 1.6rem;
+    font-size: var(--FontSize);
+    font-family: 'Lexend Deca';
+    font-weight: 400;
+}
+.card button {
+    border: none;
+    background-color: var(--VeryLightGray) ;
+    padding: 0.75rem 1rem;
+    width: fit-content;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+/* hover */
+.card button :hover{
+    background-color: transparent;
+    color: var(--VeryLightGgray);
+    border: solid;
+    border-color: var(--VeryLightGray);
+}
+
+/* media query */
+@media (min-width: 765px){
+    #container{
+        flex-direction: row;
+        max-width: 900px;
+        margin-top: 5%;
+    }
+}
+
